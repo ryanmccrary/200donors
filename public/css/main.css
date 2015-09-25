@@ -44,11 +44,12 @@ header .row .right {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 56px;
   font-weight: 900;
   text-align: center;
   margin-bottom: 30px;
   text-shadow: 0 0 20px rgba(0,0,0,.2);
+  padding: 0 30px;
 }
 
 .description {
@@ -58,6 +59,7 @@ h1 {
   text-align: justify;
   line-height: 28px;
   text-shadow: 0 0 5px rgba(0,0,0,.2);
+  padding: 0 40px;
 }
 
 .donate-header {
@@ -94,7 +96,7 @@ header .row:before,
   display: inline-block;
   vertical-align: middle;
   background: #fff;
-  width: 25%;
+  width: 20%;
   text-align: center;
   font-size: 32px;
   font-weight: 700;
@@ -118,21 +120,6 @@ header .row:before,
   background: none;
   cursor: default;
 }
-
-@media (min-width: 768px) {
-  .giftbox {
-    width: 20%;
-  }
-}
-
-@media (min-width: 480px) {
-  .giftbox {
-    width: 33.33%;
-    padding: 30px;
-    font-size: 60px;
-  }
-}
-
 
 .donation-button {
   border: none;
@@ -280,4 +267,45 @@ h3.offer {
   color:#999;
   background:#f8f9fa;
   text-shadow:0 1px 0 rgba(255,255,255,0.5)
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 65px;
+  }
+
+  h1 span {
+    display: block;
+  }
+
+  .giftbox {
+    width: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h1 span {
+    display: block;
+  }
+
+  header {
+    background-position: 50% 0;
+  }
+
+  .giftbox {
+    width: 33.33%;
+    font-size: 40px;
+  }
+
+  .donation-button {
+    padding: 30px;
+  }
 }

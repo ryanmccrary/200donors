@@ -170,7 +170,9 @@ __END__
 @@index
   <header>
     <div class="row">
-      <h1>Give the Gift of the Outdoors</h1>
+      <h1>Give the Gift
+        <span>of the Outdoors</span>
+      </h1>
       <p class="description">Join us this Christmas to give the gift of the outdoors to someone who can’t get there on their own. Our goal is to have someone claim each of the values below by the end of the year. It’s simple - if every amount below is donated, we can raise $20,000 for our 2016 programs without a single person having to give over $200. So go ahead, pick your amount and give a life changing experience to a kid through GOAT!</p>
     </div>
   </header>
