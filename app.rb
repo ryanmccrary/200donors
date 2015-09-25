@@ -5,9 +5,8 @@ require_relative 'database'
 
 Database.initialize
 
-
-set :publishable_key, ENV['PUBLISHABLE_KEY']
-set :secret_key, ENV['SECRET_KEY']
+set :publishable_key, 'pk_test_KFojpZFSM1VdKsgApaMozAIA'
+set :secret_key, 'sk_test_bNxlqRguuN3sRelyQW8sw7bP'
 enable :sessions
 
 Stripe.api_key = settings.secret_key
@@ -17,7 +16,8 @@ Mail.defaults do
                            :port      => 587,
                            :domain    => "goattrips.org",
                            :user_name => "goattrips",
-                           :password  => ENV['SENDGRID_PW'],
+                           # :password  => ENV['SENDGRID_PW'],
+                           :password  => "vin1Og1mU7aP",
                            :authentication => 'plain',
                            :enable_starttls_auto => true }
 end
@@ -138,13 +138,16 @@ __END__
   <html>
   <head>
     <title>GOAT Christmas!</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' href='css/main.css'/>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <meta property="og:image" content="http://christmas.goattrips.org/img/400x400.jpg" />
     <meta property="og:image:secure_url" content="https://christmas.goattrips.org/img/400x400.jpg" />
     <meta property="og:description" content="I participated in GOAT Christmas and you should too! If one person gives each of the values below from $1-200 we will raise just over $20,000 to kickstart our programs for 2015. GOAT would never happen without passionate people giving generously to changing lives in Greenville." />
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body>
     <%= yield %>
@@ -165,41 +168,25 @@ __END__
   </html>
 
 @@index
-  <div class="container">
-    <div class="row lights">
-      <div class="col-md-6">
-        <h1>Give the Gift of the Outdoors</h1>
-        <p>The end of the calendar year always brings excitement. Thanksgiving and Christmas are around the corner and that means time with family and friends that we often miss during the year.</p>
-        <p>The end of the year also brings planning and looking forward to the next year. At GOAT, that means planning our capacity for the following year. How many kids can we provide summer experiences for? How many new kids will get to join our Adventure Teams? How many kids will we be able to hire this year?</p>
-        <p>As we look towards the next year, much of this planning invovles budgeting. Our goal is to serve kids and change their lives in the long-term. To do this, we have to steward our resources well in the short term.</p>
-      </div>
-      <div class="col-md-6">
-        <h1>&nbsp;</h1>
-        <p>This is where we need your help! If someone gives each of the values below from $1-200 we will raise just over $20,000 to kickstart our programs for 2015.</p>
-        <p>GOAT would never happen without passionate people giving generously to changing lives in Greenville. We're excited to have each of you as a partner in this Christmas season!</p> 
-        <p><b>As a token of thanks, our friends at <a href="http://dapperink.com">Dapper Ink</a> and <a href="http://halfmoonoutfitters.com">Half-Moon Outfitters</a> are both offering 10% off orders in their stores for anyone who participates!</b> After you give you'll recieve an email with details!</p>
-        <!--<p>To show how each of you are changing the world, we put together a video telling the story of one of our kids. <a href="http://youtu.be/vkb0v5oR9qc">Check out the video on YouTube</a>&rarr;</p>-->
-        <br /><br />Because we value your privacy, all donations are <a href="http://stripe.com"><img src="img/solid@2x.png" width="119" height="26" border="0" /></a>
-      </div>
+  <header>
+    <div class="row">
+      <h1>Give the Gift of the Outdoors</h1>
+      <p class="description">Join us this Christmas to give the gift of the outdoors to someone who can’t get there on their own. Our goal is to have someone claim each of the values below by the end of the year. It’s simple - if every amount below is donated, we can raise $20,000 for our 2016 programs without a single person having to give over $200. So go ahead, pick your amount and give a life changing experience to a kid through GOAT!</p>
     </div>
-  </div>
+  </header>
+
+
+  <h2 class="donate-header">DONATE   TODAY</h2>
 
   <div class="bigbox">
     <% @donations.each do |donation| %>
       <% if donation.paid? %>
-      <div class="giftbox complete">
-        Amount: $<%= donation.amount %>.00 Complete!
-      </div>
+      <div class="giftbox complete material-icons">check</div>
+      <!-- $<%= donation.amount %>.00 -->
       <% else %>
       <div class="giftbox">
         <form action="/charge" method="post">
-          <label class="amount">
-            
-          </label>
-          <button type="submit" class="stripe-button-el" style="visibility: visible;"
-            data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">
-            <span style="display: block; min-height: 30px;">Donate $<%= donation.amount %></span>
-          </button>
+          <button type="submit" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
         </form>
       </div>
       <% end %>
@@ -215,6 +202,32 @@ __END__
       </div>
     </div>
   </div>
+
+  <div id="thanks" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Thank you!</h4>
+        </div>
+        <div class="modal-body">
+          <center>
+            <h3>Thanks for being a part of GOAT Christmas!</h3> 
+          </center>
+          <p>You'll be receiving an email soon so we can get more details from you to send a tax-reciept and some other goodies! <a href="/">See what it looks like with your amount complete!</a></p>
+          <br />
+        </div>
+        <div class="modal-footer">
+          <div class="well">
+            <p class="gracias">It would mean the world to us if you would share this with your friends! Tweet it, facebook it, instagram it, or even email it! Let everybody know that you're a part of GOAT Christmas - that you're a part of changing lives!</p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://christmas.goattrips.org" data-text="I participated in GOAT Christmas! You should too! #goatchristmas" data-via="goattrips">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <div class="fb-like" data-href="https://christmas.goattrips.org" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
   <script>
     $('.giftbox').on('click', 'button', function(e) {
@@ -235,7 +248,7 @@ __END__
             donation_id: $this.data('id'),
             email: token.email
           }).done(function() {
-            window.location.href = "/thanks";
+            window.location.href = "#thanks";
           }).fail(function() {
             alert( "Sorry! There was an error processing your donation." );
           });
@@ -243,6 +256,14 @@ __END__
       });
 
       handler.open();
+    });
+
+    $(document).ready(function() {
+      $(window).on('hashchange', function(){
+        if (window.location.hash === '#thanks') {
+          $('#thanks').modal('show');
+        }
+      }).trigger('hashchange');
     });
   </script>
 
@@ -258,24 +279,7 @@ __END__
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <% if @error %>
-        <h2>Oh no! There was an error.</h2>
-        <p><%= @error %></p>
-      <% else %>
-      <center>  
-        <h3>Thanks for being a part of GOAT Christmas!</h3> 
-        <h2>You gave <strong>$<%= @donation.amount %></strong>!</h2>
-        <p>(that makes the total: <b>$<%= @total %></b> so far)</p>
-      </center>
-      <p>You'll be receiving an email soon so we can get more details from you to send a tax-reciept and some other goodies! <a href="/">See what it looks like with your amount complete!</a></p>
-      <br />
-        <div class="well">
-          <p class="gracias">It would mean the world to us if you would share this with your friends! Tweet it, facebook it, instagram it, or even email it! Let everybody know that you're a part of GOAT Christmas - that you're a part of changing lives!</p>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://christmas.goattrips.org" data-text="I participated in GOAT Christmas! You should too! #goatchristmas" data-via="goattrips">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <div class="fb-like" data-href="https://christmas.goattrips.org" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-        </div>
-      <% end %>
+      
     </div>
   </div>
   <div class="row">

@@ -1,42 +1,153 @@
 body {
-  font-family: "Lucidia Sans", Arial, sans-serif;
+  font-family: 'Alegreya Sans', "Lucidia Sans", Arial, sans-serif;
+}
+
+header {
+  background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+  color: #fff;
+  position: relative;
+}
+
+header:before {
+  display: block;
+  content: '';
+  background: rgba(0,0,0,.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+header .row .left,
+header .row .right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.row .left {
+  font-size: 200px;
+  font-family: 'sans-serif';
+}
+
+.lights {
+  background: url('/img/lights.png') no-repeat;
+  padding-bottom: 1em;
+}
+
+.row {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 21px;
+  text-align: justify;
+  line-height: 28px;
+  text-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.donate-header {
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 8px;
+  background: #00a5a5;
+  padding: 20px 0;
+  margin: 0;
 }
 
 .bigbox {
   max-width: 1184px;
   margin: 0 auto;
+  font-size: 0;
+  /*background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;*/
+  background: url('http://wvs.topleftpixel.com/photos/scotia_plaza_tall_stitched.jpg') no-repeat;
+  background-size: cover;
+  color: #00a5a5;
+}
+
+header .row:before,
+.bigbox:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
 .giftbox {
   display: inline-block;
-  float: left;
-  width: 148px;
-  height: 70px;
-  padding: 10px 0;
+  vertical-align: middle;
+  background: #fff;
+  width: 25%;
   text-align: center;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-.lights {
-  background: url('/img/lights.png') no-repeat;
-  padding-top: 90px;
-  padding-bottom: 1em;
+.giftbox:hover {
+  cursor: pointer;
+  background: #d9f2f2;
 }
 
 .complete {
-  background-color: #C0C0C0;
-  font-weight: 900;
-  vertical-align: middle;
-  display: inline-block;
+  background: none;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 32px !important;
+  color: #fff;
+  /*text-shadow: 0 0 8px rgba(0,0,0,.25);*/
 }
 
-.complete:after {
-  content: '';
-  height: 100%;
+.complete:hover {
+  background: none;
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .giftbox {
+    width: 20%;
+  }
+}
+
+@media (min-width: 480px) {
+  .giftbox {
+    width: 33.33%;
+    padding: 30px;
+    font-size: 60px;
+  }
+}
+
+
+.donation-button {
+  border: none;
+  background: none;
+  padding: 20px 0;
   display: block;
+  width: 100%;
 }
 
-h1 {
-  font-weight: 900;
+.donation-button:active {
+  background: #c2eaea;
+}
+
+.donation-button:focus {
+  outline: none;
 }
 
 p.gracias {
