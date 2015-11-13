@@ -207,32 +207,6 @@ __END__
     </div>
   </div>
 
-  <div id="thanks" class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Thank you!</h4>
-        </div>
-        <div class="modal-body">
-          <center>
-            <h3>Thanks for being a part of GOAT Christmas!</h3> 
-          </center>
-          <p>You'll be receiving an email soon so we can get more details from you to send a tax-reciept and some other goodies! <a href="/">See what it looks like with your amount complete!</a></p>
-          <br />
-        </div>
-        <div class="modal-footer">
-          <div class="well">
-            <p class="gracias">It would mean the world to us if you would share this with your friends! Tweet it, facebook it, instagram it, or even email it! Let everybody know that you're a part of GOAT Christmas - that you're a part of changing lives!</p>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://christmas.goattrips.org" data-text="I participated in GOAT Christmas! You should too! #goatchristmas" data-via="goattrips">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            <div class="fb-like" data-href="https://christmas.goattrips.org" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-          </div>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
   <script>
     $('.giftbox').on('click', 'button', function(e) {
       e.preventDefault();
