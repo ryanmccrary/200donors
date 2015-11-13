@@ -183,13 +183,15 @@ __END__
   <div class="bigbox">
     <% @donations.each do |donation| %>
       <% if donation.paid? %>
-      <div class="giftbox complete material-icons">check</div>
+      <div class="giftbox complete material-icons"><span class="vertical-aligned">check</span></div>
       <!-- $<%= donation.amount %>.00 -->
       <% else %>
       <div class="giftbox">
-        <form action="/charge" method="post">
-          <button type="submit" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
-        </form>
+        <div class="vertical-aligned">
+          <form action="/charge" method="post">
+            <button type="submit" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
+          </form>
+        </div>
       </div>
       <% end %>
     <% end %>
