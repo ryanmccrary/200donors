@@ -252,7 +252,7 @@ __END__
             donation_id: $this.data('id'),
             email: token.email
           }).done(function() {
-            window.location.href = "#thanks";
+            window.location.href = "/thanks";
           }).fail(function() {
             alert( "Sorry! There was an error processing your donation." );
           });
@@ -260,14 +260,6 @@ __END__
       });
 
       handler.open();
-    });
-
-    $(document).ready(function() {
-      $(window).on('hashchange', function(){
-        if (window.location.hash === '#thanks') {
-          $('#thanks').modal('show');
-        }
-      }).trigger('hashchange');
     });
   </script>
 
