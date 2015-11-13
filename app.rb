@@ -168,7 +168,7 @@ __END__
   </html>
 
 @@index
-  <header>
+  <header class="main-header">
     <div class="row">
       <h1>Give the Gift
         <span>of the Outdoors</span>
@@ -246,40 +246,26 @@ __END__
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      
-    </div>
+<script>$('body').addClass('thanks');</script>
+<header class="thanks-header">
+  <div class="container">
+    <h1>Thanks so much for being a part of GOAT Christmas!</h1>
   </div>
-  <div class="row">
-      <center><p>To say thanks, we have a couple of exciting offers for you!</p></center>
-    <div class="col-md-4">
-      <h3 class="offer"><b>10% off</b> Half-Moon Outfitters</h3>
-      <p>Our friends at Half-Moon Outfitters have been providing the Southeast with quality goods and services for all outdoor adventure and travel since 1993. They are offering 10% off your order in their stores (excluding Kayaks and Paddleboards). To print your 10% off coupon, please visit this link: <a href="http://gtrps.org/1yfyiSR">Half-Moon 10% off coupon</a></p>
-    </div>
-    <div class="col-md-4">
-      <h3 class="offer"><b>10% off</b> Landmark Project</h3>
-      <p>Our friends at Dapper Ink in Greenville also make some beautiful screen printed goods that make great Christmas Gifts and they are offering 10% off your order in their store. To view and print your 10% off coupon, please visit this link: <a href="http://gtrps.org/1CaQik0">Dapper Ink 10% off coupon</a></p>
-    </div>
-    <div class="col-md-4">
-      <h3 class="offer"><b>Free</b> climbing membership</h3>
-      <p>If you would like to redeem your 1-month membership at the Mountain Goat indoor climbing gym, please complete the following form to recieve your voucher and let us know who will be redeeming it: <a href="http://gtrps.org/11sS6nE">Claim your free month voucher</a></p>
-    </div>
-  </div>
+</header>
+
+<div class="container thanks-details">
+  <h3 class="donation-message">Your donation of <span class="your-donation">$XX</span> brings the total to <span class="donation-total">$XX,XXX</span>!</h3>
+  <p class="details">We're giving you a <strong>free GOAT shirt</strong> as our way of saying thanks! Check your email for a details on your free shirt and make sure to share <a href="http://twitter.com/#goatchristmas" target="_blank">#goatchristmas</a> with your friends - the more the merrier!</p>
 </div>
 
 
 @@goal
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <center>
-        <h4>Our Christmas goal is currently at:</h4>
-        <h1><b>$<%= @total %></b> of <b>$20,100</b></h1>
-        <p>(from <%= @done.count %> donations)</p>
-        <p><a href="/">Return to GOAT Christmas</a></p>
-      </center>
-    </div>
+<script>$('body').addClass('goal');</script>
+<div class="goal-container">
+  <div class="goal-details">
+    <h4 class="flex-item">Our Christmas goal is currently at:</h4>
+    <h1 class="flex-item goal-numbers-totals"><b class="goal-numbers">$<%= @total %></b> of <b class="goal-numbers">$20,100</b></h1>
+    <p class="flex-item">(from <%= @done.count %> donations)</p>
+    <p class="flex-item"><a href="/">Return to GOAT Christmas</a></p>
   </div>
 </div>

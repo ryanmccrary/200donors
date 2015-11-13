@@ -1,8 +1,14 @@
+html,
 body {
   font-family: 'Alegreya Sans', "Lucidia Sans", Arial, sans-serif;
+  height: 100%;
 }
 
-header {
+body {
+  margin: 0;
+}
+
+header.main-header {
   background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;
   background-size: cover;
   padding: 60px 0;
@@ -10,7 +16,7 @@ header {
   position: relative;
 }
 
-header:before {
+header.main-header:before {
   display: block;
   content: '';
   background: rgba(0,0,0,.3);
@@ -22,8 +28,8 @@ header:before {
   z-index: 0;
 }
 
-header .row .left,
-header .row .right {
+header.main-header .row .left,
+header.main-header .row .right {
   display: inline-block;
   vertical-align: middle;
 }
@@ -282,9 +288,105 @@ h3.offer {
   text-shadow:0 1px 0 rgba(255,255,255,0.5)
 }
 
+.thanks,
+.goal {
+  background: #eee;
+}
 
+.thanks-header {
+  background: url('/img/treepattern.jpg');
+  width: 100%;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
 
+.thanks-header h1 {
+  background: #fff;
+  padding: 30px;
+  font-size: 45px;
+  color: red;
+  margin: 0 auto -60px;
+  width: 80%;
+  text-shadow: none;
+  border: 10px solid red;
+  border-radius: 15px;
+  max-width: 600px;
+}
 
+.thanks-details {
+  background: #fff;
+  padding: 35px 30px 30px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  max-width: 800px;
+}
+
+.donation-message {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 30px;
+  margin: 0 auto 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.donation-total,
+.your-donation {
+  color: green;
+  font-weight: 800;
+}
+
+.goal-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goal-details {
+  width: auto;
+  background: #fff;
+  padding: 35px 60px 30px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.goal-numbers-totals {
+  /*font-family: 'Helvetica', sans-serif;*/
+  font-weight: 400;
+  text-shadow: none;
+  font-size: 60px;
+}
+
+.goal-numbers {
+  display: inline-block;
+  margin-right: 20px;
+  color: green;
+  font-weight: 800;
+  font-size: 70px;
+}
+
+.goal-numbers:last-child {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.flex-item {
+  padding: 10px 0;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.details {
+  font-size: 18px;
+}
 
 @media (max-width: 768px) {
   h1 {
