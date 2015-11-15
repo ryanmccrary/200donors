@@ -17,8 +17,10 @@ Wanna try for yourself?
 
 Console:
 
+```
 irb
 require './app.rb'
+```
 
 on Heroku
 heroku run irb
