@@ -23,5 +23,8 @@ require './app.rb'
 ```
 
 on Heroku
+```
 heroku run irb
+require './app.rb'
+```
 
