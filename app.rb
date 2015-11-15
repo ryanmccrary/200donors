@@ -254,8 +254,9 @@ __END__
 </header>
 
 <div class="container thanks-details">
-  <h3 class="donation-message">Your donation of <span class="your-donation">$XX</span> brings the total to <span class="donation-total">$XX,XXX</span>!</h3>
+  <h3 class="donation-message">Your donation of <span class="your-donation">$<%= @donation.amount %></span> brings the total to <span class="donation-total">$<%= @total %></span>!</h3>
   <p class="details">We're giving you a <strong>free GOAT shirt</strong> as our way of saying thanks! Check your email for a details on your free shirt and make sure to share <a href="http://twitter.com/#goatchristmas" target="_blank">#goatchristmas</a> with your friends - the more the merrier!</p>
+  <div class="details">&larr; Click here to see the whole fundraiser with your amount taken</p>
 </div>
 
 
