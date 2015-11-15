@@ -9,7 +9,7 @@ body {
 }
 
 header.main-header {
-  background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;
+  background: url('/img/christmasgoat.jpg') no-repeat;
   background-size: cover;
   padding: 60px 0;
   color: #fff;
@@ -84,7 +84,7 @@ h1 {
   margin: 0 auto;
   font-size: 0;
   /*background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;*/
-  background: url('http://wvs.topleftpixel.com/photos/scotia_plaza_tall_stitched.jpg') no-repeat;
+  background: url('/img/mikeybg.jpg') no-repeat;
   background-size: cover;
   color: #00a5a5;
 }
