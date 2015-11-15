@@ -19,3 +19,7 @@ Console:
 
 irb
 require './app.rb'
+
+on Heroku
+heroku run irb
+
