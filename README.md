@@ -13,3 +13,9 @@ Wanna try for yourself?
 3. Seed database (Database.seed_data)
 
 4. Set your stripe keys (test or live)
+
+
+Console:
+
+irb
+require './app.rb'
