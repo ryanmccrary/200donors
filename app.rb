@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'stripe'
 require 'mail'
+require 'pry'
 require_relative 'database'
 
 Database.initialize
@@ -38,6 +39,7 @@ end
 
 post '/charge' do
   @donation = Donation.get(params[:donation_id])
+  donation = @donation
 
   customer = Stripe::Customer.create(
     email: params[:email],
@@ -60,54 +62,18 @@ post '/charge' do
     halt 500
   end
 
-
   mail = Mail.deliver do
+  
   to customer.email
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
   text_part do
-    body 'Thanks so much for helping make GOAT Christmas a reality! 
-
-We would love to get your information so we can follow up with a tax receipt and some other GOAT goodies. Please fill out this form for our records - http://gtrps.org/1AtqNcK
-
-To say thanks, we have a couple of exciting offers for you!
-
-If you would like to redeem your 1-month membership at the Mountain Goat indoor climbing gym, please complete the following form to recieve your voucher and let us know who will be redeeming it: http://gtrps.org/11sS6nE
-
-Our friends at Dapper Ink in Greenville also make some beautiful screen printed goods that make great Christmas Gifts and they are offering 10% off your order in their store. To view and print your 10% off coupon, please visit this link: http://gtrps.org/1CaQik0
-
-Thanks again for helping make GOAT a reality for kids all over Greenville and the state of SC. We would love for you to share GOAT Christmas with your friends and family and encourage them to give whatever they can. You can also keep up with the progress at https://christmas.goattrips.org/goal 
-
-Please let me know if you have any thoughts or questions about GOAT and/or GOAT Christmas!
-
-
-Ryan McCrary
-Executive Director
-GOAT'
+    binding.pry
+    body "Thanks for donating $ #{donation.amount} to GOAT Christmas!"
   end
   html_part do
     content_type 'text/html; charset=UTF-8'
-    body '<p>Thanks so much for helping make GOAT Christmas a reality!</p> 
-
-<p>We would love to get your information so we can follow up with a tax receipt and some other GOAT goodies. Please fill out this form for our records - http://gtrps.org/1AtqNcK</p>
-
-<p>To say thanks, we have a couple of exciting offers for you!
-
-<p>Our friends at Half-Moon Outfitters have been providing the Southeast with quality goods and services for all outdoor adventure and travel since 1993. They are offering 10% off your order in their stores (excluding Kayaks and Paddleboards). To print your 10% off coupon, please visit this link: http://gtrps.org/1yfyiSR</p>
-
-
-<p>Our friends at Dapper Ink in Greenville also make some beautiful screen printed goods that make great Christmas Gifts and they are offering 10% off your order in their store. To view and print your 10% off coupon, please visit this link: http://gtrps.org/1CaQik0</p>
-
-<p>If you would like to redeem your 1-month membership at the Mountain Goat indoor climbing gym, please complete the following form to recieve your voucher and let us know who will be redeeming it: http://gtrps.org/11sS6nE</p>
-
-<p>Thanks again for helping make GOAT a reality for kids all over Greenville and the state of SC. We would love for you to share GOAT Christmas with your friends and family and encourage them to give whatever they can. You can also keep up with the progress at https://christmas.goattrips.org/goal </p>
-
-<p>Please let me know if you have any thoughts or questions about GOAT and/or GOAT Christmas!</p>
-
-
-<p>Ryan McCrary<br />
-Executive Director<br />
-GOAT</p>'
+    body "<p>Thanks for donating $ #{donation.amount} to GOAT Christmas!</p>"
   end
   end
 
@@ -255,8 +221,8 @@ __END__
 
 <div class="container thanks-details">
   <h3 class="donation-message">Your donation of <span class="your-donation">$<%= @donation.amount %></span> brings the total to <span class="donation-total">$<%= @total %></span>!</h3>
-  <p class="details">We're giving you a <strong>free GOAT shirt</strong> as our way of saying thanks! Check your email for a details on your free shirt and make sure to share <a href="http://twitter.com/#goatchristmas" target="_blank">#goatchristmas</a> with your friends - the more the merrier!</p>
-  <div class="details">&larr; Click here to see the whole fundraiser with your amount taken</p>
+  <p class="details">We would love to send you a <strong>free GOAT shirt</strong> as our way of saying thanks! Check your email for a details on your free shirt and make sure to share <a href="http://twitter.com/#goatchristmas" target="_blank">#goatchristmas</a> with your friends - the more the merrier!</p>
+  <div class="details">&larr; <a href="/">Click here to see the whole fundraiser with your amount taken!</a></p>
 </div>
 
 
