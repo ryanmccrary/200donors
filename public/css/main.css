@@ -39,11 +39,6 @@ header.main-header .row .right {
   font-family: 'sans-serif';
 }
 
-.lights {
-  background: url('/img/lights.png') no-repeat;
-  padding-bottom: 1em;
-}
-
 .row {
   position: relative;
   z-index: 1;
@@ -83,7 +78,6 @@ h1 {
   max-width: 1184px;
   margin: 0 auto;
   font-size: 0;
-  /*background: url('http://advitamaeternam.org/wp-content/uploads/2014/11/Goat.jpg') no-repeat;*/
   background: url('/img/mikeybg.jpg') no-repeat;
   background-size: cover;
   color: #00a5a5;
@@ -337,6 +331,7 @@ h3.offer {
 }
 
 .goal-container {
+  background: url('/img/treepattern.jpg');
   height: 100%;
   padding: 0;
   margin: 0;
@@ -358,7 +353,6 @@ h3.offer {
 }
 
 .goal-numbers-totals {
-  /*font-family: 'Helvetica', sans-serif;*/
   font-weight: 400;
   text-shadow: none;
   font-size: 60px;
