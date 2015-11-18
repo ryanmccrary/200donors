@@ -68,11 +68,31 @@ post '/charge' do
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
   text_part do
-    body "Thanks for donating $ #{donation.amount} to GOAT Christmas!"
+    body "Thanks again for participating in GOAT Christmas! The end of the year is an important fundraising time for our organization and your giving helps set the stage for our programs next year! Your donation of $#{donation.amount} gets us closer to our goal!
+
+We would love to send you a GOAT shirt (or coffee if shirts aren’t your thing) from our online store as our way of saying thank you! You can browse what we have available at http://www.goattrips.org/shop and you can use the code SANTAHAT2015 to get any item for free with free shipping. Get something for yourself, or grab something as a gift. 
+
+We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!
+
+Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at http://goatchristmas.com/goal
+
+Merry Christmas,
+
+Ryan McCrary and the GOAT Team"
   end
   html_part do
     content_type 'text/html; charset=UTF-8'
-    body "<p>Thanks for donating $ #{donation.amount} to GOAT Christmas!</p>"
+    body "<p>Thanks again for participating in GOAT Christmas! The end of the year is an important fundraising time for our organization and your giving helps set the stage for our programs next year! Your donation of $#{donation.amount} gets us closer to our goal!</p>
+
+<p>We would love to send you a GOAT shirt (or coffee if shirts aren’t your thing) from our online store as our way of saying thank you! You can browse what we have available at <a href='http://www.goattrips.org/shop'>our online shop</a> and you can use the code SANTAHAT2015 to get any item for free with free shipping. Get something for yourself, or grab something as a gift.</p>
+
+<p>We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!</p>
+
+<p>Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at <a href='http://goatchristmas.com/goal'>goatchristmas.com/goal</a></p>
+
+<p>Merry Christmas,</p>
+
+<p>Ryan McCrary and the GOAT Team</p>"
   end
   end
 
