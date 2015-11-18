@@ -78,7 +78,10 @@ Thanks again, and please let us know if we can answer any questions or thoughts 
 
 Merry Christmas,
 
-Ryan McCrary and the GOAT Team"
+Ryan McCrary and the GOAT Team
+
+
+"
   end
   html_part do
     content_type 'text/html; charset=UTF-8'
@@ -92,7 +95,7 @@ Ryan McCrary and the GOAT Team"
 
 <p>Merry Christmas,</p>
 
-<p>Ryan McCrary and the GOAT Team</p>"
+<p>Ryan McCrary and the GOAT Team</p><br /><br /><br />"
   end
   end
 
