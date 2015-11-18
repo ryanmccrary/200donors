@@ -68,7 +68,6 @@ post '/charge' do
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
   text_part do
-    binding.pry
     body "Thanks for donating $ #{donation.amount} to GOAT Christmas!"
   end
   html_part do
