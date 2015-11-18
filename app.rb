@@ -205,6 +205,7 @@ __END__
         name: "Great Outdoor Adventure Trips",
         image: 'img/160x160.jpg',
         allowRememberMe: 'false',
+        billingAddress: 'true',
         amount: $this.data('amount'),
         closed: function() {
         },
