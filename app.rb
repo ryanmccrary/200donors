@@ -6,8 +6,8 @@ require_relative 'database'
 
 Database.initialize
 
-set :publishable_key, 'pk_test_KFojpZFSM1VdKsgApaMozAIA'
-set :secret_key, 'sk_test_bNxlqRguuN3sRelyQW8sw7bP'
+set :publishable_key, ENV['PUBLISHABLE_KEY']
+set :secret_key, ENV['SECRET_KEY']
 enable :sessions
 
 Stripe.api_key = settings.secret_key
@@ -17,8 +17,7 @@ Mail.defaults do
                            :port      => 587,
                            :domain    => "goattrips.org",
                            :user_name => "goattrips",
-                           # :password  => ENV['SENDGRID_PW'],
-                           :password  => "vin1Og1mU7aP",
+                           :password  => ENV['SENDGRID_PW'],
                            :authentication => 'plain',
                            :enable_starttls_auto => true }
 end
