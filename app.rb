@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'stripe'
 require 'mail'
-require 'pry'
+# require 'pry'
 require_relative 'database'
 
 Database.initialize
