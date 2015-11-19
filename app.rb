@@ -73,7 +73,7 @@ We would love to send you a GOAT shirt (or coffee if shirts aren’t your thing)
 
 We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!
 
-Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at http://goatchristmas.com/goal
+Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at http://christmas.goattrips.org/goal
 
 Merry Christmas,
 
@@ -90,7 +90,7 @@ Ryan McCrary and the GOAT Team
 
 <p>We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!</p>
 
-<p>Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at <a href='http://goatchristmas.com/goal'>goatchristmas.com/goal</a></p>
+<p>Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at <a href='http://christmas.goattrips.org/goal'>goatchristmas.com/goal</a></p>
 
 <p>Merry Christmas,</p>
 
