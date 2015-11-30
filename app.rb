@@ -24,6 +24,11 @@ end
 
 get '/' do
   @donations = Donation.all
+  @done = Donation.all(:paid => 'true')
+  @total = 0
+  @done.each do |done|
+    @total += done.amount
+  end
   erb :index
 end
 
@@ -254,6 +259,11 @@ __END__
   <div class="goal-details">
     <h4 class="flex-item">Our Christmas goal is currently at:</h4>
     <h1 class="flex-item goal-numbers-totals"><b class="goal-numbers">$<%= @total %></b> of <b class="goal-numbers">$20,100</b></h1>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= (@total/20000.0*100).round %>%;">
+          <%= (@total/20000.0*100).round %>%
+        </div>
+      </div>
     <p class="flex-item">(from <%= @done.count %> donations)</p>
     <p class="flex-item"><a href="/">Return to GOAT Christmas</a></p>
   </div>
