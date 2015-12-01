@@ -247,7 +247,7 @@ __END__
 </header>
 
 <div class="container thanks-details">
-  <h3 class="donation-message">Your donation of <span class="your-donation">$<%= @donation.amount %></span> brings the total to <span class="donation-total">$<%= @total %></span>!</h3>
+  <h3 class="donation-message">Your donation of <span class="your-donation">$<%= @donation.amount %></span> brings the total to <span class="donation-total">$<%= @total.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></span>!</h3>
   <p class="details">We would love to send you a <strong>free GOAT shirt</strong> as our way of saying thanks! Check your email for a details on your free shirt and make sure to share <a href="http://twitter.com/#goatchristmas" target="_blank">#goatchristmas</a> with your friends - the more the merrier!</p>
   <div class="details">&larr; <a href="/">Click here to see the whole fundraiser with your amount taken!</a></p>
 </div>
@@ -258,7 +258,7 @@ __END__
 <div class="goal-container">
   <div class="goal-details">
     <h4 class="flex-item">Our Christmas goal is currently at:</h4>
-    <h1 class="flex-item goal-numbers-totals"><b class="goal-numbers">$<%= @total %></b> of <b class="goal-numbers">$20,100</b></h1>
+    <h1 class="flex-item goal-numbers-totals"><b class="goal-numbers">$<%= @total.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse %></b> of <b class="goal-numbers">$20,100</b></h1>
       <div class="progress">
         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= (@total/20000.0*100).round %>%;">
           <%= (@total/20000.0*100).round %>%
