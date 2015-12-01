@@ -136,7 +136,7 @@ __END__
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <meta property="og:image" content="http://christmas.goattrips.org/img/400x400.jpg" />
     <meta property="og:image:secure_url" content="https://christmas.goattrips.org/img/400x400.jpg" />
-    <meta property="og:description" content="I participated in GOAT Christmas and you should too! If one person gives each of the values below from $1-200 we will raise just over $20,000 to kickstart our programs for 2015. GOAT would never happen without passionate people giving generously to changing lives in Greenville." />
+    <meta property="og:description" content="I participated in GOAT Christmas and you should too! If one person gives each of the values below from $1-200 we will raise just over $20,000 to kickstart our programs for 2016. GOAT would never happen without passionate people giving generously to changing lives in Greenville." />
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
