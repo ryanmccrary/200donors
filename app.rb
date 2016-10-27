@@ -132,6 +132,7 @@ __END__
     <title>GOAT Christmas!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel='stylesheet' type='text/css' href='css/main.css'/>
+    <link rel='icon' type='image/png' href='img/favicon.ico' />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <meta property="og:image" content="http://christmas.goattrips.org/img/400x400.jpg" />
