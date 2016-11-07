@@ -8,6 +8,9 @@
 # Dang DS_Store
 .DS_Store
 
+# Dotenv variable files
+.env
+
 test.db
 
 test_keys.rb
