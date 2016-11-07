@@ -168,7 +168,7 @@ __END__
       </h1>
       <p class="description">Join us this Christmas to give the gift of the outdoors to someone who can’t get there on their own. Our goal is to have someone claim each of the values below by the end of the year. It’s simple - if every amount below is donated, we can raise $20,000 for our 2017 programs without a single person having to give over $200. So go ahead, pick your amount and give a life changing experience to a kid through GOAT!</p>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Exc6otteNoQ" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/Exc6otteNoQ" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </header>
