@@ -1,4 +1,8 @@
 require 'sinatra'
+if Sinatra::Base.development?
+  require 'dotenv'
+  Dotenv.load
+end
 require 'stripe'
 require 'mail'
 # require 'pry'
