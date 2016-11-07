@@ -9,6 +9,7 @@ gem 'pg'
 gem 'mail'
 
 group :development do
+  gem 'dotenv-rails'
   gem 'shotgun'
   gem 'tux'
   gem 'pry'
