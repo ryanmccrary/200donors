@@ -11,7 +11,7 @@ body {
 header.main-header {
   background: url('/img/christmasgoat.jpg') no-repeat;
   background-size: cover;
-  padding: 0 0 60px 0;
+  padding: 60px 0;
   color: #fff;
   position: relative;
 }
