@@ -76,34 +76,38 @@ post '/charge' do
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
   text_part do
-    body "Thanks again for participating in GOAT Christmas! The end of the year is an important fundraising time for our organization and your giving helps set the stage for our programs next year! Your donation of $#{donation.amount} gets us closer to our goal!
+    body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve. 
 
-We would love to send you a GOAT shirt (or coffee if shirts aren’t your thing) from our online store as our way of saying thank you! You can browse what we have available at http://www.goattrips.org/shop and you can use the code SANTAHAT2015 to get any item for free with free shipping. Get something for yourself, or grab something as a gift. 
+We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year. 
 
-We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!
+We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. 
 
-Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at http://christmas.goattrips.org/goal
+Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!
 
-Merry Christmas,
+Merry Christmas!
 
-Ryan McCrary and the GOAT Team
+Ryan & The GOAT Team
+
+PS - You can keep up with the progress at http://www.goatchristmas.com/goal
 
 
 "
   end
   html_part do
     content_type 'text/html; charset=UTF-8'
-    body "<p>Thanks again for participating in GOAT Christmas! The end of the year is an important fundraising time for our organization and your giving helps set the stage for our programs next year! Your donation of $#{donation.amount} gets us closer to our goal!</p>
+    body "<p>Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.</p>
 
-<p>We would love to send you a GOAT shirt (or coffee if shirts aren’t your thing) from our online store as our way of saying thank you! You can browse what we have available at <a href='http://www.goattrips.org/shop'>our online shop</a> and you can use the code SANTAHAT2015 to get any item for free with free shipping. Get something for yourself, or grab something as a gift.</p>
+<p>We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year.</p>
 
-<p>We would love for you to share GOAT Christmas with your friends and family on facebook, twitter or instagram and help us reach our goal for Christmas!</p>
+<p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox.</p>
 
-<p>Thanks again, and please let us know if we can answer any questions or thoughts about GOAT or GOAT Christmas! You can checkup on our progress at <a href='http://christmas.goattrips.org/goal'>http://christmas.goattrips.org/goal</a></p>
+<p>Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!</p>
 
-<p>Merry Christmas,</p>
+<p>Merry Christmas!</p>
 
-<p>Ryan McCrary and the GOAT Team</p><br /><br /><br />"
+<p>Ryan & The GOAT Team</p>
+
+<p>PS - You can keep up with the progress at http://www.goatchristmas.com/goal</p><br /><br /><br />"
   end
   end
 
