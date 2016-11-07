@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.2.1'
 
 gem 'sinatra'
 gem 'stripe'
@@ -9,6 +9,7 @@ gem 'pg'
 gem 'mail'
 
 group :development do
+  gem 'dotenv-rails'
   gem 'shotgun'
   gem 'tux'
   gem 'pry'

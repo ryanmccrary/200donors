@@ -1,4 +1,8 @@
 require 'sinatra'
+if Sinatra::Base.development?
+  require 'dotenv'
+  Dotenv.load
+end
 require 'stripe'
 require 'mail'
 # require 'pry'
@@ -15,8 +19,8 @@ Stripe.api_key = settings.secret_key
 Mail.defaults do
   delivery_method :smtp, { :address   => "smtp.sendgrid.net",
                            :port      => 587,
-                           :domain    => "goattrips.org",
-                           :user_name => "goattrips",
+                           :domain    => ENV['SENDGRID_DOMAIN'],
+                           :user_name => ENV['SENDGRID_USER'],
                            :password  => ENV['SENDGRID_PW'],
                            :authentication => 'plain',
                            :enable_starttls_auto => true }
