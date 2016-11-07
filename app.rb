@@ -80,7 +80,7 @@ post '/charge' do
 
 We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year. 
 
-We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. 
+We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!
 
 Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!
 
@@ -99,7 +99,7 @@ PS - You can keep up with the progress at http://www.goatchristmas.com/goal
 
 <p>We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year.</p>
 
-<p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox.</p>
+<p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!</p>
 
 <p>Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!</p>
 
