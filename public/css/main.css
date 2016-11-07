@@ -11,7 +11,7 @@ body {
 header.main-header {
   background: url('/img/christmasgoat.jpg') no-repeat;
   background-size: cover;
-  padding: 60px 0;
+  padding: 0 0 60px 0;
   color: #fff;
   position: relative;
 }
@@ -42,6 +42,12 @@ header.main-header .row .right {
 .row {
   position: relative;
   z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 h1 {
@@ -51,16 +57,21 @@ h1 {
   margin-bottom: 30px;
   text-shadow: 0 0 20px rgba(0,0,0,.2);
   padding: 0 30px;
+
+  flex-basis: 100%;
 }
 
 .description {
   max-width: 700px;
   margin: 0 auto;
   font-size: 21px;
-  text-align: justify;
+  
   line-height: 28px;
   text-shadow: 0 0 5px rgba(0,0,0,.2);
   padding: 0 40px;
+
+  flex: 1;
+  min-width: 400px;
 }
 
 .donate-header {
@@ -165,11 +176,21 @@ h3.offer {
   color: #ef5123;
 }
 
+.video-container-container {
+  max-width: 700px;
+  margin: 0 auto;
+
+  flex: 1;
+  padding: 20px 40px;
+  min-width: 400px;
+
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-    width: 700px;
+    padding-top: 0; height: 0px; overflow: hidden;
+    margin: 0 auto;
 }
  
 .video-container iframe,
