@@ -1,0 +1,74 @@
+<header class="main-header">
+    <div class="row">
+      <h1>Give the Gift
+        <span>of the Outdoors</span>
+      </h1>
+      <p class="description">Join us this Christmas to give the gift of the outdoors to someone who can’t get there on their own. Our goal is to have someone claim each of the values below by the end of the year. It’s simple - if every amount below is donated, we can raise $20,000 for our 2017 programs without a single person having to give over $200. So go ahead, pick your amount and give a life changing experience to a kid through GOAT!</p>
+      <div class="video-container-container">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Exc6otteNoQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+    </div>
+  </header>
+
+
+  <h2 class="donate-header">DONATE   TODAY</h2>
+
+  <div class="bigbox">
+    <% @donations.each do |donation| %>
+      <% if donation.paid? %>
+      <div class="giftbox complete material-icons"><span class="vertical-aligned">check</span></div>
+      <!-- $<%= donation.amount %>.00 -->
+      <% else %>
+      <div class="giftbox">
+        <div class="vertical-aligned">
+          <form action="/charge" method="post">
+            <button type="submit" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
+          </form>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+  <div class="container">
+    <div class="row footer">
+      <div class="col-md-6">
+        <p>To learn more about <a href="http://goattrips.org">GOAT</a>, you can visit our website at <a href="http://goattrips.org">goattrips.org</a> or on <a href="http://facebook.com/goattrips">facebook</a>.</p>
+        <p>All donations are processed securely by <a href="http://stripe.com">Stripe</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.giftbox').on('click', 'button', function(e) {
+      e.preventDefault();
+      $this = $(this);
+
+      var handler = StripeCheckout.configure({
+        key: '<%= settings.publishable_key %>',
+        name: "Great Outdoor Adventure Trips",
+        image: 'img/160x160.jpg',
+        allowRememberMe: 'false',
+        billingAddress: 'true',
+        amount: $this.data('amount'),
+        closed: function() {
+        },
+        token: function(token) {
+          $.post( "/charge", {
+            token_id: token.id,
+            donation_id: $this.data('id'),
+            email: token.email
+          }).done(function() {
+            window.location.href = "/thanks";
+          }).fail(function() {
+            alert( "Sorry! There was an error processing your donation." );
+          });
+        }
+      });
+
+      handler.open();
+    });
+  </script>
