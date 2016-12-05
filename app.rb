@@ -78,7 +78,7 @@ post '/charge' do
   text_part do
     body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve. 
 
-We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year. 
+We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year. 
 
 We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!
 
@@ -97,7 +97,7 @@ PS - You can keep up with the progress at http://www.goatchristmas.com/goal
     content_type 'text/html; charset=UTF-8'
     body "<p>Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.</p>
 
-<p>We hope you'll share this with your friends and family and help us finish this fundraiser our before the end of the year.</p>
+<p>We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.</p>
 
 <p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!</p>
 
