@@ -1,11 +1,11 @@
 require 'sinatra'
 if Sinatra::Base.development?
+  require 'pry'
   require 'dotenv'
   Dotenv.load
 end
 require 'stripe'
 require 'mail'
-# require 'pry'
 require_relative 'database'
 
 Database.initialize
@@ -71,14 +71,14 @@ post '/charge' do
   end
 
   mail = Mail.deliver do
-  
+
   to customer.email
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
   text_part do
-    body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve. 
+    body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.
 
-We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year. 
+We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.
 
 We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!
 
