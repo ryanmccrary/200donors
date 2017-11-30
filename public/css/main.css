@@ -90,7 +90,7 @@ h1 {
   max-width: 1184px;
   margin: 0 auto;
   font-size: 0;
-  background: url("/img/folksbg.jpg") no-repeat;
+  background: url("/img/campfirebgshort.jpg") no-repeat;
   background-size: cover;
   color: #00a5a5;
 }
@@ -333,11 +333,11 @@ h3.offer {
   background: #fff;
   padding: 30px;
   font-size: 45px;
-  color: red;
+  color: green;
   margin: 0 auto -60px;
   width: 80%;
   text-shadow: none;
-  border: 10px solid red;
+  border: 10px solid green;
   border-radius: 15px;
   max-width: 600px;
 }
