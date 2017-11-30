@@ -75,40 +75,44 @@ post '/charge' do
   to customer.email
   from 'Ryan McCrary <ryan@goattrips.org>'
   subject 'GOAT Christmas!'
-  text_part do
-    body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.
+    text_part do
+      body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.
 
-We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.
+      We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.
 
-We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!
+      As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon 2018christmas so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!
 
-Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!
+      You'll also recieve a tax receipt first thing next year!
 
-Merry Christmas!
+      Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!
 
-Ryan & The GOAT Team
+      Merry Christmas!
 
-PS - You can keep up with the progress at http://www.goatchristmas.com/goal
+      Ryan & The GOAT Team
+
+      PS - You can keep up with the progress at http://www.goatchristmas.com/goal
 
 
-"
-  end
-  html_part do
-    content_type 'text/html; charset=UTF-8'
-    body "<p>Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.</p>
+      "
+    end
+    html_part do
+      content_type 'text/html; charset=UTF-8'
+      body "<p>Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.</p>
 
-<p>We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.</p>
+      <p>We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.</p>
 
-<p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!</p>
+      <p>As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon <b>2018christmas</b> so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!</p>
 
-<p>Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!</p>
+      <p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!</p>
 
-<p>Merry Christmas!</p>
+      <p>Thanks again so much, and please let us know if you have any questions about GOAT or GOAT Christmas!</p>
 
-<p>Ryan & The GOAT Team</p>
+      <p>Merry Christmas!</p>
 
-<p>PS - You can keep up with the progress at http://www.goatchristmas.com/goal</p><br /><br /><br />"
-  end
+      <p>Ryan & The GOAT Team</p>
+
+      <p>PS - You can keep up with the progress at http://www.goatchristmas.com/goal</p><br /><br /><br />"
+    end
   end
 
   halt 200
