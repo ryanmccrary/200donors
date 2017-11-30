@@ -80,7 +80,7 @@ post '/charge' do
 
       We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.
 
-      As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon 2018christmas so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!
+      As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon 2017christmas so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!
 
       You'll also recieve a tax receipt first thing next year!
 
@@ -101,7 +101,7 @@ post '/charge' do
 
       <p>We hope you'll share this with your friends and family and help us finish this fundraiser out before the end of the year.</p>
 
-      <p>As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon <b>2018christmas</b> so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!</p>
+      <p>As a way of saying thanks, we'd love for you to pick out something you like in the GOAT shop (http://goattrips.org/shop) and use the coupon <b>2017christmas</b> so we can send it free. Don't feel bad about it - we actually pay our GOAT students to help ship orders, so you're helping them out by ordering free stuff!</p>
 
       <p>We'll also be sending you a small thank you in the following weeks, so keep an eye on your mailbox. You'll also recieve a tax receipt first thing next year!</p>
 
