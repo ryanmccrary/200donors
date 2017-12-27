@@ -26,6 +26,13 @@ Mail.defaults do
                            :enable_starttls_auto => true }
 end
 
+# Marking offline donations paid from console. Probably not the best wat to do this, whatevs
+def markpaid(amount)
+    pay = Donation.last(:amount => amount)
+    pay.paid = true
+    pay.save
+end
+
 get '/' do
   @donations = Donation.all
   @done = Donation.all(:paid => 'true')
