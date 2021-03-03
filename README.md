@@ -8,7 +8,7 @@ Wanna try for yourself?
 
 1. Bundle Install
 
-2. If you're using Postgres, you'll need a db named 'mydb' or whatever you change your database file to (createdb mydb)
+2. If you're using Postgres, you'll need a db named '200donors' or whatever you change your database file to (createdb 200donors)
 
 3. Seed database (Database.seed_data)
 

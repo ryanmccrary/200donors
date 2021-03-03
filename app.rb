@@ -80,8 +80,8 @@ post '/charge' do
   mail = Mail.deliver do
 
   to customer.email
-  from 'Ryan McCrary <ryan@goattrips.org>'
-  subject 'GOAT Christmas!'
+  from 'Joe Canney <canney@newcovschool.net>'
+  subject 'New Cov 200'
     text_part do
       body "Thank you so much for participating in GOAT Christmas! We're constantly amazed at the generosity of each of you who make GOAT possible for the kids that we serve.
 

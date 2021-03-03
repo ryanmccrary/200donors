@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.6.6'
 
 gem 'sinatra'
 gem 'stripe'
-gem 'data_mapper'
-gem 'dm-postgres-adapter'
+gem 'rom'
+gem 'rom-sql'
 gem 'pg'
 gem 'mail'
 
