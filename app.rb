@@ -52,6 +52,31 @@ get '/goal' do
   erb :goal
 end
 
+post '/checkout' do
+  @donation = Donation.get(params[:donation_id])
+  donation = @donation
+
+  session = Stripe::Checkout::Session.create({
+    payment_method_types: ['card'],
+    line_items: [{
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: 'Grow NCS',
+        },
+        unit_amount: 2000,
+      },
+      quantity: 1,
+    }],
+    mode: 'payment',
+    # These placeholder URLs will be replaced in a following step.
+    success_url: 'http://grow-ncs.test:4567/thanks',
+    cancel_url: 'http://grow-ncs.test:4567/',
+  })
+
+  { id: session.id }.to_json
+end
+
 post '/charge' do
   @donation = Donation.get(params[:donation_id])
   donation = @donation
