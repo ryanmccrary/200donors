@@ -18,7 +18,7 @@
       <% else %>
       <div class="giftbox">
         <div class="vertical-aligned">
-            <button id="donation-button" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
+            <button id="donation-button-<%= donation.id %>" class="donation-button" style="visibility: visible;" data-amount="<%= donation.amount*100 %>" data-id="<%= donation.id %>">$<%= donation.amount %></button>
         </div>
       </div>
       <% end %>
@@ -40,11 +40,8 @@
       var donationButtons = document.getElementsByClassName("donation-button");
 
       for(var i = 0; i < donationButtons.length; i++) {
-        var button = donationButtons[i];
-        var url = `/checkout?donation_id=${button.dataset.id}`;
-        console.log("url = " + url);
-  
-        button.addEventListener('click', function() {
+        donationButtons[i].addEventListener('click', function() {
+          var url = `/checkout?donation_id=${this.dataset.id}`;
           fetch(url, {
             method: 'POST'
           })
@@ -68,36 +65,3 @@
         });
       }
     </script>
-
-  # <script>
-  #   var stripe = Stripe('<%= settings.publishable_key %>');
-
-  #   $('.giftbox').on('click', 'button', function(e) {
-  #     e.preventDefault();
-  #     $this = $(this);
-
-  #     var handler = StripeCheckout.configure({
-  #       key: '<%= settings.publishable_key %>',
-  #       name: "Great Outdoor Adventure Trips",
-  #       image: 'img/160x160.jpg',
-  #       allowRememberMe: 'false',
-  #       billingAddress: 'true',
-  #       amount: $this.data('amount'),
-  #       closed: function() {
-  #       },
-  #       token: function(token) {
-  #         $.post( "/charge", {
-  #           token_id: token.id,
-  #           donation_id: $this.data('id'),
-  #           email: token.email
-  #         }).done(function() {
-  #           window.location.href = "/thanks";
-  #         }).fail(function() {
-  #           alert( "Sorry! There was an error processing your donation." );
-  #         });
-  #       }
-  #     });
-
-  #     handler.open();
-  #   });
-  # </script>
